@@ -1,6 +1,6 @@
 from guidereg.datasets.loader import load_dataset
 from guidereg.datasets.registration_dataset import build_registration_cases
-from guidereg.pipelines.initial_pipeline    import run_initial_pipeline
+from guidereg.pipelines.registration_pipeline    import run_registration_pipeline
 from guidereg.execution.dispatcher          import dispatch_execution
 
 def run_pipeline(
@@ -34,7 +34,7 @@ def run_pipeline(
     # ======================================
     dispatch_execution(
         cases               =   cases,
-        pipeline_function   =   run_initial_pipeline,
+        pipeline_function   =   run_registration_pipeline,
         config              =   config,
         logger              =   logger,
         backend             =   config["execution"]["backend"],

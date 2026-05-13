@@ -1,0 +1,8 @@
+guidereg/data
+guidereg/outputs
+guidereg/outputs_MMulti_new
+guidereg/outputs_multi 
+guidereg/outputs_multi_new 
+test.py
+requirements.txt
+GuideReg.egg-info/

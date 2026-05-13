@@ -20,8 +20,8 @@ class ITKElastixBackend:
         fixed_image,
         moving_image,
         fixed_mask=None,
-        moving_mask=None
-
+        moving_mask=None,
+        initial_transform=None
     ):
         self.output_directory.mkdir(
             parents=True,
@@ -40,6 +40,7 @@ class ITKElastixBackend:
                 parameter_object = self.parameter_object,
                 fixed_mask       = fixed_mask,
                 moving_mask      = moving_mask,
+                initial_transform_parameter_object = initial_transform,
                 log_to_console   = True,
                 log_to_file      = True,
                 output_directory=str(self.output_directory)

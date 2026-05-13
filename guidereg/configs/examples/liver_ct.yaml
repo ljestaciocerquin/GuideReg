@@ -10,7 +10,7 @@ columns:
   moving_organ_mask: moving_organs
 
 output:
-  directory: outputs_MMulti_new/
+  directory: outputs/
 
 registration:
   stages:

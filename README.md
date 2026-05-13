@@ -7,3 +7,6 @@ conda install -c conda-forge itk-elastix
 git clone https://github.com/yourname/GuideReg.git
 cd Guidereg
 pip install -e .
+
+# Execute
+guidereg pipeline --config configs/examples/liver_ct.yaml
