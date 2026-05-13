@@ -1,12 +1,8 @@
 from guidereg.backends.itk_elastix_backend import ITKElastixBackend
 from guidereg.core.parameter_maps import build_initial_parameter_object
 from guidereg.core.stage_result import StageResult
-from guidereg.utils.stage_paths import (
-    get_stage_output_directory
-)
-from guidereg.utils.config_saving import (
-    save_stage_config
-)
+from guidereg.utils.stage_paths import get_stage_output_directory
+from guidereg.utils.config_saving import save_stage_config
 
 def run_initial_stage(
     fixed_image,

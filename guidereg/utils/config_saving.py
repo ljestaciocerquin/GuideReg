@@ -1,5 +1,4 @@
 from pathlib import Path
-
 import yaml
 
 
@@ -9,10 +8,8 @@ def save_stage_config(
     filename="stage_config.yaml"
 ):
 
-    output_directory = Path(
-        output_directory
-    )
-
+    output_directory = Path(output_directory)
+    
     output_directory.mkdir(
         parents=True,
         exist_ok=True

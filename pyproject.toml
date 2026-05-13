@@ -15,7 +15,6 @@ dependencies = [
     "numpy",
     "pandas",
     "pyyaml",
-    "SimpleITK",
     "tqdm"
 ]
 

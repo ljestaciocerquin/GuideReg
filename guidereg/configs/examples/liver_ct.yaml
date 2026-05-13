@@ -10,7 +10,7 @@ columns:
   moving_organ_mask: moving_organs
 
 output:
-  directory: outputs/
+  directory: outputs_new/
 
 registration:
   stages:
@@ -31,7 +31,8 @@ masks:
   dilation_radius: 5
 
 saving:
-  save_registered_images: false
+  save_initial_registered_mask: false
+  save_rigid_registered_mask:   true
 
 execution:
   backend: multiprocessing #sequential

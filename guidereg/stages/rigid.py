@@ -2,12 +2,8 @@ from guidereg.backends.itk_elastix_backend import ITKElastixBackend
 from guidereg.core.parameter_maps import build_rigid_parameter_object
 from guidereg.core.stage_result import StageResult
 from guidereg.preprocessing.intensity import guess_background_value
-from guidereg.utils.stage_paths import (
-    get_stage_output_directory
-)
-from guidereg.utils.config_saving import (
-    save_stage_config
-)
+from guidereg.utils.stage_paths import get_stage_output_directory
+from guidereg.utils.config_saving import save_stage_config
 
 def run_rigid_stage(
     fixed_image,
@@ -43,26 +39,13 @@ def run_rigid_stage(
     )
 
     stage_config = {
-
         "stage": "rigid",
-
-        "use_masks":
-            fixed_mask is not None,
-
-        "use_moving_masks":
-            moving_mask is not None,
-
-        "automatic_initialization":
-            use_automatic_initialization,
-
-        "metric":
-            "AdvancedMattesMutualInformation",
-
-        "optimizer":
-            "AdaptiveStochasticGradientDescent",
-
-        "iterations":
-            500
+        "use_masks": fixed_mask is not None,
+        "use_moving_masks": moving_mask is not None,
+        "automatic_initialization": use_automatic_initialization,
+        "metric": "AdvancedMattesMutualInformation",
+        "optimizer": "AdaptiveStochasticGradientDescent",
+        "iterations": 500
     }
 
     save_stage_config(

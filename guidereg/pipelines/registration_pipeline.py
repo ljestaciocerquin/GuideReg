@@ -4,9 +4,8 @@ from guidereg.core.io import (
 )
 from guidereg.preprocessing.masks import dilate_mask
 from guidereg.stages.initial import run_initial_stage
-from guidereg.stages.rigid import (
-    run_rigid_stage
-)
+from guidereg.stages.rigid import run_rigid_stage
+from guidereg.utils.result_saving import save_stage_result
 
 def run_registration_pipeline(
     case,
@@ -73,6 +72,12 @@ def run_registration_pipeline(
                 output_directory    = case.output_directory,
                 logger              = logger
             )
+            save_stage_result(
+                result                  =   result,
+                moving_mask             =   moving_mask,
+                output_directory        =   result.metadata["output_directory"],
+                save_registered_mask    =   config["saving"]["save_initial_registered_mask"]
+            )
             
         elif stage_name == "rigid":
             result = run_rigid_stage(
@@ -83,6 +88,12 @@ def run_registration_pipeline(
                 moving_mask     =   moving_dilated_mask,
                 output_directory=   case.output_directory,
                 logger          =   logger
+            )
+            save_stage_result(
+                result                  =   result,
+                moving_mask             =   moving_mask,
+                output_directory        =   result.metadata["output_directory"],
+                save_registered_mask    =   config["saving"]["save_rigid_registered_mask"]
             )
 
         else:

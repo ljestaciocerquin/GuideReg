@@ -1,5 +1,4 @@
 from collections import Counter
-
 import itk
 import numpy as np
 
