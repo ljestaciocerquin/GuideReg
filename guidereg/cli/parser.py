@@ -58,4 +58,19 @@ def build_parser():
         help="Path to YAML configuration file"
     )
 
+    # ==================================================
+    #  PROPAGATION FOR SEGMENTATIONS
+    # ==================================================
+    propagation_parser = subparsers.add_parser(
+        "propagate",
+        help="Propagate segmentations using existing transforms"
+    )
+
+    propagation_parser.add_argument(
+        "--config",
+        type=str,
+        required=True,
+        help="Path to YAML configuration file"
+    )
+
     return parser
