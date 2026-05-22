@@ -5,9 +5,8 @@ from guidereg.utils.logger     import setup_logger
 from guidereg.utils.validation import validate_config
 from guidereg.utils.filesystem import create_directory
 from guidereg.pipelines.pipeline import run_pipeline
-from guidereg.pipelines.propagation_pipeline import (
-    run_propagation_pipeline
-)
+from guidereg.pipelines.propagation_pipeline import run_propagation_pipeline
+
 def main():
 
     logger = setup_logger()
