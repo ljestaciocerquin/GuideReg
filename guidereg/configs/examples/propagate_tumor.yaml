@@ -1,0 +1,18 @@
+dataset:
+  input_csv: data/tumor_pairs.csv
+
+columns:
+  subject_id: SubjectKeyRadiology
+  scan_date: ExamDate
+  moving_tumor_mask: moving_lesion_seg
+
+output:
+  directory: outputs_new/
+
+propagation:
+  stages:
+    - initial
+    - rigid
+
+  output_name:
+    propagated_tumor.nii.gz
