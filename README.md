@@ -16,3 +16,7 @@
 # Execute
         $ cd guidereg
         $ guidereg pipeline --config configs/examples/liver_ct.yaml
+
+# Execute only for segmentation
+        $ cd guidereg
+        $ guidereg propagate --config configs/examples/propagate_tumor.yaml
