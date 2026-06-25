@@ -22,6 +22,7 @@ def apply_transform_to_segmentation(
             .GetParameterMap(i)
         )
         parameter_map["FinalBSplineInterpolationOrder"] = ["0"]
+        parameter_map["DefaultPixelValue"]              = ["0"]
 
         transform_parameter_object.SetParameterMap(
             i,
